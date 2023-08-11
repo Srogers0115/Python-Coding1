@@ -1,0 +1,21 @@
+Sub CalculateTotal()
+    Dim product_name As String
+    Dim quantity As Integer
+    Dim price_per_unit As Double
+    
+    product_name = InputBox("Enter the product name:")
+    quantity = InputBox("Enter the quantity:")
+    price_per_unit = InputBox("Enter the price per unit:")
+    
+    Dim total_product_cost As Double
+    Dim sales_tax As Double
+    Dim shipping_charge As Double
+    Dim grand_total As Double
+    
+    total_cost = quantity * price_per_unit
+    sales_tax = total_cost * 0.0825
+    shipping_charge = 5
+    grand_total = total_cost + sales_tax + shipping_charge
+    
+    MsgBox ("Total Cost: " & total_cost & ", Sales tax: " & sales_tax & ", Shipping charge: " & shipping_charge & ", Grand total: " & grand_total)
+End Sub
